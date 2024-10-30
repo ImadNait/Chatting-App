@@ -1,0 +1,44 @@
+:root {
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+  
+    color-scheme: light dark;
+}
+
+
+body{
+  background-color: #161616;
+  justify-content: center;
+  flex-direction: column;
+
+
+}
+p{
+  color: #e6e6fa;
+}
+#message-cont{
+  border: 1px solid whitesmoke;
+  width: 80%;
+  height: 90%;
+  justify-content: center;
+  flex-direction: column;
+
+
+}
+input {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0)
+  );
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  width: 40%;
+
+}
+
