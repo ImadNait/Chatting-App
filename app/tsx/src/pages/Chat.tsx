@@ -32,8 +32,12 @@ export default function Chat(){
         <form id="form">
         <label htmlFor="message-input">Message</label>
         <input type="text" name="" id="msgIn" placeholder="send something" />
+<<<<<<< HEAD
         <button id="sendButton">Send</button>
         <br />
+=======
+        <button id="sendButton">Send</button><br>
+>>>>>>> c0a8c0d730ec6da576dedcc7ae19d4fe3a4ed77a
         <label htmlFor="room-input">Room</label>
         <input type="text" id="roomIn"  placeholder="join someone"/>
         <button id="roomButton">Join</button>
