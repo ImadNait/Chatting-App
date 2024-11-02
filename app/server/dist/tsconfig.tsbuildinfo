@@ -1,1 +1,1 @@
-{"root":["../config.ts","../server.ts"],"version":"5.6.3"}
+{"root":["../config.ts","../index.d.ts","../server.ts","../__mocks__/index.ts","../_tests_/handlers/users.test.ts","../dtos/newuser.dto.ts","../handlers/userhandler.ts","../routes/users.ts","../types/query-params.ts","../types/response.ts"],"version":"5.6.3"}

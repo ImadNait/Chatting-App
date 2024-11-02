@@ -1,8 +1,8 @@
 :root {
     font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
     line-height: 1.5;
-    font-weight: 400;
-  
+    font-weight: bold;
+    color: white;
     color-scheme: light dark;
 }
 
@@ -18,13 +18,12 @@ p{
   color: #e6e6fa;
 }
 #message-cont{
-  border: 1px solid whitesmoke;
-  width: 80%;
-  height: 90%;
+  display: flex;
   justify-content: center;
-  flex-direction: column;
-
-
+  align-items: center;
+  width: 80%;
+  height: 300px;
+  border: 1px solid whitesmoke;
 }
 input {
   background: linear-gradient(
@@ -38,7 +37,24 @@ input {
   border: 1px solid rgba(255, 255, 255, 0.18);
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
   border: 1px solid rgba(255, 255, 255, 0.5);
-  width: 40%;
+  width: 280px;
+  height: 50px; 
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.app{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+button{
+  width: 60px;
+  height: 30px;
+  border-radius: 25%;
+  border: none;
 
 }
 
