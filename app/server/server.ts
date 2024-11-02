@@ -2,7 +2,6 @@ import express, { NextFunction, Request, Response } from 'express';
 import { Server } from 'ws';
 import { config } from 'dotenv'
 import userRouter from './routes/users'
-import { unescape } from 'node:querystring';
 import { user } from './types/response';
 config();
 const wsPort = process.env.WS_PORT
