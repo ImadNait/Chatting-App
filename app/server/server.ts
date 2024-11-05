@@ -11,16 +11,16 @@ console.log(wsPort);
 app.use('/users', userRouter)
 app.use(express.json())
 app.get('/',(req: Request, res: Response, next: NextFunction)=>{
-    res.send('wsup niggaaa')
+    res.send('GET')
 })
 app.get('/home',(req: Request, res: Response, next: NextFunction)=>{
-    res.send('WELCOME HOME!!')
+    res.send('Home Page')
 })
 app.get('/about',(req: Request, res: Response, next: NextFunction)=>{
-    res.send('NOOO!!!')
+    res.send('about us')
 })
 app.get('/contacts',(req: Request, res: Response, next: NextFunction)=>{
-    res.send('CONTACT US')
+    res.send('contacts')
 })
 
 app.listen(PORT,()=>{
