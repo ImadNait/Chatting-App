@@ -1,7 +1,7 @@
 import { Router } from "express";
 import { createUser, getUsers } from "../handlers/userHandler";
 
-const router = Router()
+const router = Router();
 
 router.get('/getUsers', getUsers)
 
