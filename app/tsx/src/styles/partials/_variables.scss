@@ -1,0 +1,16 @@
+$chatBG:rgb(163, 163, 163);
+$msgBG:rgb(112, 112, 112);
+@mixin blur{
+    background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.1),
+        rgba(255, 255, 255, 0)
+      );
+      backdrop-filter: blur(15px);
+      -webkit-backdrop-filter: blur(15px);
+}
+@mixin align{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
