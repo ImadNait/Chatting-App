@@ -17,11 +17,11 @@ export default function Chat(){
     })
 
     joinButton.addEventListener("click", ()=>{
-        const room = roomInp.value
+        const room = roomInp.value;
     })
     function displayMsg(message=messageInp.value) {
         const div = document.createElement('div')
-        div.textContent = message
+        div.textContent = message;
         document.getElementById('message-cont')?.append(div)
 
     }
