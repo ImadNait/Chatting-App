@@ -1,4 +1,5 @@
 @import './partials/variables';
+@import './partials/draw';
 :root {
     font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
     line-height: 1.5;
@@ -18,11 +19,22 @@ body{
 
 
 }
-
-#message-cont{
-  width: 80%;
-  height: 300px;
+form{
+  @include align(column);
+  #message-cont{
+  width: 60vw;
+  height: 60vh;
   border: 1px solid whitesmoke;
+  overflow-y: scroll;
+  div:nth-child(even){
+    background: #585858;
+    color: white;
+    font-weight: bold;
+  }
+}
+  .inputs{
+  @include align(row);
+}
 }
 input {
   @include blur();
@@ -35,6 +47,15 @@ input {
   margin-left: 5px;
   margin-right: 5px;
 }
+.roomStatus{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 18vw;
+  height: 36vh;
+  border: 1px solid whitesmoke;
+  overflow-y: scroll;
+}
 
 .app{
   display: flex;
@@ -44,9 +65,18 @@ input {
 }
 
 button{
-  width: 60px;
-  height: 30px;
-  border-radius: 20%;
-  border: none;
+  width: 80px;
+  height: 40px;
+  font-size: large;
+  background: $buttonBG;
+  border: $buttonBD;
+  cursor: pointer;
+  border-radius: 40px;
+  &:hover{
+    color: $mainBG;
+    background: $white;
+    transition: 0.7s ease-in-out;
+  }
+
 
 }

@@ -1,5 +1,21 @@
 $chatBG:rgb(163, 163, 163);
 $msgBG:rgb(112, 112, 112);
+$mainBG:#161616;
+$boardBG:white;
+$defPencilClr:black;
+$primary-color: #3b82f6;
+$primary-dark: #2563eb;
+$white: #ffffff;
+$black: #000000;
+$gray-50: #f9fafb;
+$gray-100: #272727;
+$gray-200: #666666;
+$gray-300: #636363;
+$gray-600: #4b5563;
+$gray-700: #374151;
+$buttonBG: transparent;
+$buttonBD: white 2px solid;
+
 @mixin blur{
     background: linear-gradient(
         135deg,
@@ -9,8 +25,10 @@ $msgBG:rgb(112, 112, 112);
       backdrop-filter: blur(15px);
       -webkit-backdrop-filter: blur(15px);
 }
-@mixin align{
+@mixin align($fdir){
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: $fdir;
+
 }
