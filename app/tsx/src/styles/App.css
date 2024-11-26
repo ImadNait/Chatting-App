@@ -189,6 +189,16 @@ form .inputs {
   flex-direction: row;
 }
 
+.friendsList {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 18vw;
+  height: 36vh;
+  border: 1px solid whitesmoke;
+  overflow-y: scroll;
+}
+
 input {
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
   backdrop-filter: blur(15px);
@@ -211,6 +221,14 @@ input {
   height: 36vh;
   border: 1px solid whitesmoke;
   overflow-y: scroll;
+}
+.roomStatus .member {
+  margin-bottom: 2vh;
+}
+.roomStatus button {
+  position: absolute;
+  right: 0;
+  font-size: 16px;
 }
 
 .app {

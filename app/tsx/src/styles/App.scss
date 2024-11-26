@@ -32,10 +32,22 @@ form{
     font-weight: bold;
   }
 }
+
   .inputs{
   @include align(row);
 }
 }
+
+.friendsList{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 18vw;
+  height: 36vh;
+  border: 1px solid whitesmoke;
+  overflow-y: scroll;
+}
+
 input {
   @include blur();
   border-radius: 20px;
@@ -55,6 +67,14 @@ input {
   height: 36vh;
   border: 1px solid whitesmoke;
   overflow-y: scroll;
+  .member{
+    margin-bottom: 2vh;
+  }
+  button{
+    position: absolute;
+    right: 0;
+    font-size: 16px;
+  }
 }
 
 .app{
