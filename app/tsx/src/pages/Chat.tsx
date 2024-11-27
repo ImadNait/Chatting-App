@@ -22,8 +22,7 @@ export default function Chat() {
       setUsername(userName);
       newSocket.emit("setUsername", userName);
     });
-
-    newSocket.on("sendBack", (message) => {
+    newSocket.on("sendBack", (message:string) => {
       setMsgs((prevMsg) => [...prevMsg, message]);
     });
 
