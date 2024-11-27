@@ -113,7 +113,7 @@ export default function Chat() {
         setRoomMembers([]);
       });
     }
-  };
+  }
 
   const startPrivateChat = (friend: string) => {
     setRoom(friend);
