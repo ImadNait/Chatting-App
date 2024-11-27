@@ -22,7 +22,7 @@ export default function Chat() {
 
 
     });
-    newSocket.on("sendBack", (message) => {
+    newSocket.on("sendBack", (message:string) => {
       setMsgs((prevMsg) => [...prevMsg, message]);
     });
     newSocket.on("userCountUpdate", (count: number) => {
