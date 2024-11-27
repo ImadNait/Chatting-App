@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { io, Socket } from "socket.io-client";
-
 export default function Chat() {
   const [message, setMsg] = useState("");
   const [messages, setMsgs] = useState<string[]>([]);
@@ -80,7 +79,7 @@ export default function Chat() {
 
       socket.on("friendRequestReceived", (fromUsername: string) => {
         setFriendRequests((prevRequests) => [...prevRequests, fromUsername]);
-        setFriends([...friends, fromUsername]);
+        setFriends((prevFriends) => [...prevFriends, fromUsername]); 
       });
   
 
@@ -94,7 +93,7 @@ export default function Chat() {
       socket?.off("friendRequestReceived");
       socket?.off("friendRequestAccepted");
     };
-  }, [socket]);
+  }, [socket, friends]);
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (message.trim() === "") return;
@@ -126,11 +125,11 @@ export default function Chat() {
     socket?.emit("sendFriendRequest", toUsername);
   };
   
-  const fetchFriends = () => {
-    socket?.emit("getFriends");
-  };
   
   useEffect(() => {
+    const fetchFriends = () => {
+      socket?.emit("getFriends");
+    };
     fetchFriends();
   }, [socket]);
 
@@ -163,7 +162,17 @@ export default function Chat() {
       <form id="form" onSubmit={handleSubmit}>
         <div id="message-cont">
           {messages.map((msg, index) => (
-            <div key={index} className="message">
+            <div key={index} className="message"
+            style={{
+              backgroundColor: String(msg).includes(username) ? "#161616" : "#585858",
+              color: "white",
+              padding: "10px",
+              borderRadius: "5px",
+              width:"max-content",
+              margin: "5px 0",
+              textAlign: String(msg).includes(username) ? "right" : "left",
+
+            }}>
               {msg}
             </div>
           ))}

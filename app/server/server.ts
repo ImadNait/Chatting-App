@@ -51,7 +51,11 @@ io.on("connection", (socket) => {
 
   socket.on("custom", (message, room) => {
     const username = users[socket.id]?.username || "Unknown";
-    const formattedMessage = `${username}: ${message}`;
+    const formattedMessage = `${username}:
+${message}`;
+    formattedMessage.replace(/\n/g, "<br />");
+    console.log(formattedMessage);
+    
     if (room === "") {
       socket.broadcast.emit("sendBack", formattedMessage);
     } else {

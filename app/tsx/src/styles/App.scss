@@ -1,5 +1,4 @@
 @import './partials/variables';
-@import './partials/draw';
 :root {
     font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
     line-height: 1.5;
@@ -26,11 +25,8 @@ form{
   height: 60vh;
   border: 1px solid whitesmoke;
   overflow-y: scroll;
-  div:nth-child(even){
-    background: #585858;
-    color: white;
-    font-weight: bold;
-  }
+  color: white;
+  font-weight: bold;
 }
 
   .inputs{
@@ -87,7 +83,7 @@ input {
 button{
   width: 80px;
   height: 40px;
-  font-size: large;
+  font-size: 16px;
   background: $buttonBG;
   border: $buttonBD;
   cursor: pointer;
