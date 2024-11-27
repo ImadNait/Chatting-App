@@ -21,9 +21,4 @@ A fully functional real-time chat application using **React**, **Socket.IO**, an
 
 ---
 
-## **How to Run the Project**  
-
-### Prerequisites:  
-- Node.js (>=14.x)  
-- npm or yarn  
 
