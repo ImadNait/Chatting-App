@@ -30,7 +30,7 @@ io.on("connection", (socket) => {
         friends: [],        
       };
       friendRequests[username] = []; 
-    console.log(`User connected: ${username}`);
+    console.log(`User connected: ${username}`)
   });
 
   socket.on("joinRoom", (room, callback) => {
@@ -116,7 +116,7 @@ ${message}`;
     const username = users[socket.id]?.username;
     if (username) {
       const friends = users[socket.id].friends;
-      io.emit("updateFriends", friends);
+      io.emit("updateFriends", friends)
     }
   });
   
