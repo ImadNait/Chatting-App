@@ -30,7 +30,7 @@ io.on("connection", (socket) => {
         friends: [],        
       };
       friendRequests[username] = []; 
-    console.log(`User connected: ${username}`)
+    console.log(`User connected: ${username}`);
   });
 
   socket.on("joinRoom", (room, callback) => {
